@@ -1,3 +1,18 @@
+import {
+  FETCHING_FRIENDS,
+  FRIENDS_FETCHED,
+  ERROR_FETCHING_FRIENDS,
+  SAVING_FRIENDS,
+  FRIENDS_SAVED,
+  ERROR_SAVING_FRIENDS,
+  UPDATING_FRIEND,
+  FRIEND_UPDATED,
+  ERROR_UPDATING_FRIEND,
+  DELETING_FRIEND,
+  FRIEND_DELETED,
+  ERROR_DELETING_FRIEND
+} from "../actions";
+
 const initialState = {
   fetchingFriends: false,
   friendsFetched: false,
@@ -11,6 +26,7 @@ const initialState = {
   error: null
 };
 
+// Check if all these cases are needed...
 export const rootReducer = (state = initialState, action) => {
   switch (action.type) {
     case FETCHING_FRIENDS:
